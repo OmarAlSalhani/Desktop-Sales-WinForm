@@ -1,0 +1,1393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4306ED4F-F678-40EF-A04F-ECE7352DE91B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClientApp</RootNamespace>
+    <AssemblyName>ClientApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.6.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.3.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Identity.1.3.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=3.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.3.0.0\lib\net461\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Sql.BatchParser, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.Data.Tools.Sql.BatchParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.22.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.22.0\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=2.16.5.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.2.16.5\lib\net45\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.8.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.8.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment, Version=1.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Assessment.1.0.305\lib\net462\Microsoft.SqlServer.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment.Types, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Assessment.Authoring.1.0.282\lib\net462\Microsoft.SqlServer.Assessment.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Assessment, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.HadrData, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.HadrData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.HadrModel, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.HadrModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlScriptPublish, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.SqlScriptPublish.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo.Notebook, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.Smo.Notebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46521.71\lib\net462\Microsoft.SqlServer.WmiEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="N2C">
+      <HintPath>F:\نسخ من برنامج الصيدلية\31-07-2021\for_test_pharmacy - Copy\PharmacyManage2\bin\Debug\N2C.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OmarNotifications">
+      <HintPath>..\..\..\..\..\..\Projects\for_test_pharmacy - Copy\PharmacyManage2\bin\Debug\OmarNotifications.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.2.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.2\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.7.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.6.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.8.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.4.5.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.2\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="activate_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activate_form.designer.cs">
+      <DependentUpon>activate_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\get_pc_information_class.cs" />
+    <Compile Include="en_agel_notifications_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="en_agel_notifications_form.designer.cs">
+      <DependentUpon>en_agel_notifications_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ar_agel_notifications_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ar_agel_notifications_form.designer.cs">
+      <DependentUpon>ar_agel_notifications_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="en_blackbox_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="en_blackbox_form.designer.cs">
+      <DependentUpon>en_blackbox_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ar_blackbox_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ar_blackbox_form.designer.cs">
+      <DependentUpon>ar_blackbox_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="en_daily_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="en_daily_report_form.designer.cs">
+      <DependentUpon>en_daily_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ar_daily_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ar_daily_report_form.designer.cs">
+      <DependentUpon>ar_daily_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ash3ar_forms\da2en_ash3ar_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ash3ar_forms\da2en_ash3ar_form.designer.cs">
+      <DependentUpon>da2en_ash3ar_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ash3ar_forms\en\en_da2en_ash3ar_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ash3ar_forms\en\en_da2en_ash3ar_form.designer.cs">
+      <DependentUpon>en_da2en_ash3ar_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\add_kshf_class.cs" />
+    <Compile Include="classes\aol_moda_class.cs" />
+    <Compile Include="classes\comboBox_class.cs" />
+    <Compile Include="classes\connection_class.cs" />
+    <Compile Include="classes\const_variables_class.cs" />
+    <Compile Include="classes\convert_class.cs" />
+    <Compile Include="classes\form_close_class.cs" />
+    <Compile Include="classes\images_class.cs" />
+    <Compile Include="classes\logs_class.cs" />
+    <Compile Include="classes\lookup_edit_class.cs" />
+    <Compile Include="classes\move_form_class.cs" />
+    <Compile Include="classes\my_grid_view_class.cs" />
+    <Compile Include="classes\navigation_class.cs" />
+    <Compile Include="classes\notifications_class.cs" />
+    <Compile Include="classes\run_worker_class.cs" />
+    <Compile Include="classes\storage_class.cs" />
+    <Compile Include="classes\texts_class.cs" />
+    <Compile Include="classes\TLVCls.cs" />
+    <Compile Include="classes\validate_class.cs" />
+    <Compile Include="customers_forms\ar_customers_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_form.designer.cs">
+      <DependentUpon>ar_customers_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_kshf_7sab_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_kshf_7sab_form.designer.cs">
+      <DependentUpon>ar_customers_kshf_7sab_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_mdeonee_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_mdeonee_form.designer.cs">
+      <DependentUpon>ar_customers_mdeonee_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_paied_money_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\ar_customers_paied_money_form.designer.cs">
+      <DependentUpon>ar_customers_paied_money_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_form.designer.cs">
+      <DependentUpon>en_customers_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_kshf_7sab_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_kshf_7sab_form.designer.cs">
+      <DependentUpon>en_customers_kshf_7sab_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_mdeonee_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_mdeonee_form.designer.cs">
+      <DependentUpon>en_customers_mdeonee_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_paied_money_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_forms\en\en_customers_paied_money_form.designer.cs">
+      <DependentUpon>en_customers_paied_money_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\ard_s3r_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\ard_s3r_uc.designer.cs">
+      <DependentUpon>ard_s3r_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_ard_s3r_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_ard_s3r_form.Designer.cs">
+      <DependentUpon>en_ard_s3r_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_ard_s3r_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_ard_s3r_uc.designer.cs">
+      <DependentUpon>en_ard_s3r_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_pos_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_pos_uc.designer.cs">
+      <DependentUpon>en_pos_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_sell_fatora_checkout_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_sell_fatora_checkout_form.designer.cs">
+      <DependentUpon>en_sell_fatora_checkout_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_sell_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_sell_report_form.designer.cs">
+      <DependentUpon>en_sell_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_fatora_detailes_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_fatora_detailes_form.designer.cs">
+      <DependentUpon>en_fatora_detailes_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_pos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\en\en_pos_form.Designer.cs">
+      <DependentUpon>en_pos_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\fatora_detailes_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\fatora_detailes_form.designer.cs">
+      <DependentUpon>fatora_detailes_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\ar_pos_uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\ar_pos_uc.designer.cs">
+      <DependentUpon>ar_pos_uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\ar_sell_fatora_checkout_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\ar_sell_fatora_checkout_form.designer.cs">
+      <DependentUpon>ar_sell_fatora_checkout_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\ar_sell_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\ar_sell_report_form.designer.cs">
+      <DependentUpon>ar_sell_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\ard_s3r_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\ard_s3r_form.Designer.cs">
+      <DependentUpon>ard_s3r_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\pos_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fatora_forms\pos_form.Designer.cs">
+      <DependentUpon>pos_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fatora_forms\products_model.cs" />
+    <Compile Include="en_first_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="en_first_form.designer.cs">
+      <DependentUpon>en_first_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="first_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="first_form.designer.cs">
+      <DependentUpon>first_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="first_launch_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="first_launch_form.designer.cs">
+      <DependentUpon>first_launch_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="en_login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="en_login_form.designer.cs">
+      <DependentUpon>en_login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_form.designer.cs">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="en_main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="en_main_form.designer.cs">
+      <DependentUpon>en_main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_form.designer.cs">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports_files\ash3ar_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\ash3ar_report.designer.cs">
+      <DependentUpon>ash3ar_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\customers_kshf_7sab_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\customers_kshf_7sab_report.designer.cs">
+      <DependentUpon>customers_kshf_7sab_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\customers_mdeonea_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\customers_mdeonea_report.designer.cs">
+      <DependentUpon>customers_mdeonea_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\customers_paied_money_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\customers_paied_money_report.designer.cs">
+      <DependentUpon>customers_paied_money_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_ash3ar_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_ash3ar_report.designer.cs">
+      <DependentUpon>en_ash3ar_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_customers_kshf_7sab_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_customers_kshf_7sab_report.designer.cs">
+      <DependentUpon>en_customers_kshf_7sab_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_customers_mdeonea_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_customers_mdeonea_report.designer.cs">
+      <DependentUpon>en_customers_mdeonea_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_customers_paied_money_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_customers_paied_money_report.designer.cs">
+      <DependentUpon>en_customers_paied_money_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_daily_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_daily_report.designer.cs">
+      <DependentUpon>en_daily_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_logs_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_logs_report.designer.cs">
+      <DependentUpon>en_logs_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_manage_customers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_manage_customers.designer.cs">
+      <DependentUpon>en_manage_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_manage_products.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_manage_products.designer.cs">
+      <DependentUpon>en_manage_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_manage_storage_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_manage_storage_report.designer.cs">
+      <DependentUpon>en_manage_storage_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_pos_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_pos_report.designer.cs">
+      <DependentUpon>en_pos_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_sales_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_sales_report.designer.cs">
+      <DependentUpon>en_sales_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_snds_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_snds_report.designer.cs">
+      <DependentUpon>en_snds_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_kbd_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_kbd_report.designer.cs">
+      <DependentUpon>en_snd_kbd_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_kbd_report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_kbd_report2.designer.cs">
+      <DependentUpon>en_snd_kbd_report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_srf_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_srf_report.designer.cs">
+      <DependentUpon>en_snd_srf_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_srf_report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_snd_srf_report2.designer.cs">
+      <DependentUpon>en_snd_srf_report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_storage_operations1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_storage_operations1.designer.cs">
+      <DependentUpon>en_storage_operations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_users_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_users_report.designer.cs">
+      <DependentUpon>en_users_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_XtraReportSaleInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_XtraReportSaleInvoice.designer.cs">
+      <DependentUpon>en_XtraReportSaleInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_new_fatora.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_new_fatora.designer.cs">
+      <DependentUpon>en_new_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\en\en_the_new_fatora.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\en\en_the_new_fatora.designer.cs">
+      <DependentUpon>en_the_new_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\logs_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\logs_report.designer.cs">
+      <DependentUpon>logs_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\manage_customers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\manage_customers.designer.cs">
+      <DependentUpon>manage_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\manage_products.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\manage_products.designer.cs">
+      <DependentUpon>manage_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\manage_storage_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\manage_storage_report.designer.cs">
+      <DependentUpon>manage_storage_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\the_fatora.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\the_fatora.designer.cs">
+      <DependentUpon>the_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\the_ard_s3r_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\the_ard_s3r_report.designer.cs">
+      <DependentUpon>the_ard_s3r_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\pos_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\pos_report.designer.cs">
+      <DependentUpon>pos_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\sales_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\sales_report.designer.cs">
+      <DependentUpon>sales_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snds_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snds_report.designer.cs">
+      <DependentUpon>snds_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report.designer.cs">
+      <DependentUpon>snd_kbd_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\daily_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\daily_report.designer.cs">
+      <DependentUpon>daily_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_kbd_report2.designer.cs">
+      <DependentUpon>snd_kbd_report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report.designer.cs">
+      <DependentUpon>snd_srf_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\snd_srf_report2.designer.cs">
+      <DependentUpon>snd_srf_report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\storage_operations1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\storage_operations1.designer.cs">
+      <DependentUpon>storage_operations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\users_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\users_report.designer.cs">
+      <DependentUpon>users_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\ard_s3r_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\ard_s3r_report.designer.cs">
+      <DependentUpon>ard_s3r_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\new_fatora.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\new_fatora.designer.cs">
+      <DependentUpon>new_fatora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports_files\XtraReportSaleInvoice.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports_files\XtraReportSaleInvoice.designer.cs">
+      <DependentUpon>XtraReportSaleInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings_files\database_settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>database_settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="settings_files\main_settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>main_settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="settings_files\permissions_settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>permissions_settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="settings_forms\backup_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings_forms\backup_form.designer.cs">
+      <DependentUpon>backup_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings_forms\ar_main_settings_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings_forms\ar_main_settings_form.designer.cs">
+      <DependentUpon>ar_main_settings_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings_forms\en\en_main_settings_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings_forms\en\en_main_settings_form.designer.cs">
+      <DependentUpon>en_main_settings_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settings_forms\en\en_backup_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings_forms\en\en_backup_form.designer.cs">
+      <DependentUpon>en_backup_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_snds_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_snds_report_form.designer.cs">
+      <DependentUpon>ar_snds_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_srf_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_srf_form.designer.cs">
+      <DependentUpon>ar_snd_srf_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_qbd_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\ar_snd_qbd_form.designer.cs">
+      <DependentUpon>ar_snd_qbd_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\en\en_snds_report_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\en\en_snds_report_form.designer.cs">
+      <DependentUpon>en_snds_report_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\en\en_snd_qbd_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\en\en_snd_qbd_form.designer.cs">
+      <DependentUpon>en_snd_qbd_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="snds_forms\en\en_snd_srf_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="snds_forms\en\en_snd_srf_form.designer.cs">
+      <DependentUpon>en_snd_srf_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storages_forms\ar_storages_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storages_forms\ar_storages_form.designer.cs">
+      <DependentUpon>ar_storages_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storages_forms\ar_storage_operations_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storages_forms\ar_storage_operations_form.designer.cs">
+      <DependentUpon>ar_storage_operations_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storages_forms\en\en_storages_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storages_forms\en\en_storages_form.designer.cs">
+      <DependentUpon>en_storages_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storages_forms\en\en_storage_operations_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storages_forms\en\en_storage_operations_form.designer.cs">
+      <DependentUpon>en_storage_operations_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="users_forms\ar_users_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users_forms\ar_users_form.designer.cs">
+      <DependentUpon>ar_users_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="users_forms\ar_user_permissions_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users_forms\ar_user_permissions_form.designer.cs">
+      <DependentUpon>ar_user_permissions_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="users_forms\en\en_users_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users_forms\en\en_users_form.designer.cs">
+      <DependentUpon>en_users_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="users_forms\en\en_user_permissions_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users_forms\en\en_user_permissions_form.designer.cs">
+      <DependentUpon>en_user_permissions_form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="activate_form.resx">
+      <DependentUpon>activate_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_agel_notifications_form.resx">
+      <DependentUpon>en_agel_notifications_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ar_agel_notifications_form.resx">
+      <DependentUpon>ar_agel_notifications_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_blackbox_form.resx">
+      <DependentUpon>en_blackbox_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ar_blackbox_form.resx">
+      <DependentUpon>ar_blackbox_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_daily_report_form.resx">
+      <DependentUpon>en_daily_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ar_daily_report_form.resx">
+      <DependentUpon>ar_daily_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ash3ar_forms\da2en_ash3ar_form.resx">
+      <DependentUpon>da2en_ash3ar_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ash3ar_forms\en\en_da2en_ash3ar_form.resx">
+      <DependentUpon>en_da2en_ash3ar_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\ar_customers_form.resx">
+      <DependentUpon>ar_customers_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\ar_customers_kshf_7sab_form.resx">
+      <DependentUpon>ar_customers_kshf_7sab_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\ar_customers_mdeonee_form.resx">
+      <DependentUpon>ar_customers_mdeonee_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\ar_customers_paied_money_form.resx">
+      <DependentUpon>ar_customers_paied_money_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\en\en_customers_form.resx">
+      <DependentUpon>en_customers_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\en\en_customers_kshf_7sab_form.resx">
+      <DependentUpon>en_customers_kshf_7sab_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\en\en_customers_mdeonee_form.resx">
+      <DependentUpon>en_customers_mdeonee_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_forms\en\en_customers_paied_money_form.resx">
+      <DependentUpon>en_customers_paied_money_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\ard_s3r_uc.resx">
+      <DependentUpon>ard_s3r_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_ard_s3r_form.resx">
+      <DependentUpon>en_ard_s3r_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_ard_s3r_uc.resx">
+      <DependentUpon>en_ard_s3r_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_pos_uc.resx">
+      <DependentUpon>en_pos_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_sell_fatora_checkout_form.resx">
+      <DependentUpon>en_sell_fatora_checkout_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_sell_report_form.resx">
+      <DependentUpon>en_sell_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_fatora_detailes_form.resx">
+      <DependentUpon>en_fatora_detailes_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\en\en_pos_form.resx">
+      <DependentUpon>en_pos_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\fatora_detailes_form.resx">
+      <DependentUpon>fatora_detailes_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\ar_pos_uc.resx">
+      <DependentUpon>ar_pos_uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\ar_sell_fatora_checkout_form.resx">
+      <DependentUpon>ar_sell_fatora_checkout_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\ar_sell_report_form.resx">
+      <DependentUpon>ar_sell_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\ard_s3r_form.resx">
+      <DependentUpon>ard_s3r_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fatora_forms\pos_form.resx">
+      <DependentUpon>pos_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_first_form.resx">
+      <DependentUpon>en_first_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first_form.resx">
+      <DependentUpon>first_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first_launch_form.ar-SY.resx">
+      <DependentUpon>first_launch_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first_launch_form.en.resx">
+      <DependentUpon>first_launch_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first_launch_form.resx">
+      <DependentUpon>first_launch_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_login_form.resx">
+      <DependentUpon>en_login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login_form.resx">
+      <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="en_main_form.resx">
+      <DependentUpon>en_main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_form.resx">
+      <DependentUpon>main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reports_files\ash3ar_report.resx">
+      <DependentUpon>ash3ar_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\customers_kshf_7sab_report.resx">
+      <DependentUpon>customers_kshf_7sab_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\customers_mdeonea_report.resx">
+      <DependentUpon>customers_mdeonea_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\customers_paied_money_report.resx">
+      <DependentUpon>customers_paied_money_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_ash3ar_report.resx">
+      <DependentUpon>en_ash3ar_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_customers_kshf_7sab_report.resx">
+      <DependentUpon>en_customers_kshf_7sab_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_customers_mdeonea_report.resx">
+      <DependentUpon>en_customers_mdeonea_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_customers_paied_money_report.resx">
+      <DependentUpon>en_customers_paied_money_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_daily_report.resx">
+      <DependentUpon>en_daily_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_logs_report.resx">
+      <DependentUpon>en_logs_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_manage_customers.resx">
+      <DependentUpon>en_manage_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_manage_products.resx">
+      <DependentUpon>en_manage_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_manage_storage_report.resx">
+      <DependentUpon>en_manage_storage_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_pos_report.resx">
+      <DependentUpon>en_pos_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_sales_report.resx">
+      <DependentUpon>en_sales_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_snds_report.resx">
+      <DependentUpon>en_snds_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_snd_kbd_report.resx">
+      <DependentUpon>en_snd_kbd_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_snd_kbd_report2.resx">
+      <DependentUpon>en_snd_kbd_report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_snd_srf_report.resx">
+      <DependentUpon>en_snd_srf_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_snd_srf_report2.resx">
+      <DependentUpon>en_snd_srf_report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_storage_operations1.resx">
+      <DependentUpon>en_storage_operations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_users_report.resx">
+      <DependentUpon>en_users_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_XtraReportSaleInvoice.resx">
+      <DependentUpon>en_XtraReportSaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_new_fatora.resx">
+      <DependentUpon>en_new_fatora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\en\en_the_new_fatora.resx">
+      <DependentUpon>en_the_new_fatora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\logs_report.resx">
+      <DependentUpon>logs_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\manage_customers.resx">
+      <DependentUpon>manage_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\manage_products.resx">
+      <DependentUpon>manage_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\manage_storage_report.resx">
+      <DependentUpon>manage_storage_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\the_fatora.resx">
+      <DependentUpon>the_fatora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\the_ard_s3r_report.resx">
+      <DependentUpon>the_ard_s3r_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\pos_report.resx">
+      <DependentUpon>pos_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\sales_report.resx">
+      <DependentUpon>sales_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snds_report.resx">
+      <DependentUpon>snds_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_kbd_report.resx">
+      <DependentUpon>snd_kbd_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\daily_report.resx">
+      <DependentUpon>daily_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_kbd_report2.resx">
+      <DependentUpon>snd_kbd_report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_srf_report.resx">
+      <DependentUpon>snd_srf_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\snd_srf_report2.resx">
+      <DependentUpon>snd_srf_report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\storage_operations1.resx">
+      <DependentUpon>storage_operations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\users_report.resx">
+      <DependentUpon>users_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\ard_s3r_report.resx">
+      <DependentUpon>ard_s3r_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\new_fatora.resx">
+      <DependentUpon>new_fatora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_files\XtraReportSaleInvoice.resx">
+      <DependentUpon>XtraReportSaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings_forms\backup_form.resx">
+      <DependentUpon>backup_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings_forms\ar_main_settings_form.resx">
+      <DependentUpon>ar_main_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings_forms\en\en_main_settings_form.resx">
+      <DependentUpon>en_main_settings_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settings_forms\en\en_backup_form.resx">
+      <DependentUpon>en_backup_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_snds_report_form.resx">
+      <DependentUpon>ar_snds_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_snd_srf_form.resx">
+      <DependentUpon>ar_snd_srf_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\ar_snd_qbd_form.resx">
+      <DependentUpon>ar_snd_qbd_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\en\en_snds_report_form.resx">
+      <DependentUpon>en_snds_report_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\en\en_snd_qbd_form.resx">
+      <DependentUpon>en_snd_qbd_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snds_forms\en\en_snd_srf_form.resx">
+      <DependentUpon>en_snd_srf_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storages_forms\ar_storages_form.resx">
+      <DependentUpon>ar_storages_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storages_forms\ar_storage_operations_form.resx">
+      <DependentUpon>ar_storage_operations_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storages_forms\en\en_storages_form.resx">
+      <DependentUpon>en_storages_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storages_forms\en\en_storage_operations_form.resx">
+      <DependentUpon>en_storage_operations_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users_forms\ar_users_form.resx">
+      <DependentUpon>ar_users_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users_forms\ar_user_permissions_form.resx">
+      <DependentUpon>ar_user_permissions_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users_forms\en\en_users_form.resx">
+      <DependentUpon>en_users_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users_forms\en\en_user_permissions_form.resx">
+      <DependentUpon>en_user_permissions_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\barber_app.products_forms.products_model.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="settings_files\database_settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>database_settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="settings_files\main_settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>main_settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="settings_files\permissions_settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>permissions_settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\facebook.png" />
+    <Resource Include="images\instagram.png" />
+    <Resource Include="images\messenger.png" />
+    <Resource Include="images\twitter.png" />
+    <Resource Include="images\whatsapp.png" />
+    <Resource Include="images\www.png" />
+    <Resource Include="images\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\الخلفية3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة الانستغرام.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة التلغرام.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة التويتر.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة السناب شات.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة الفيسبوك.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة الموقع.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\أيقونة الواتساب.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ايقونة اليوتيوب.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تسجيل الدخول.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\أيقونة الإعلاق.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\إخفاء الشاشة1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\إغلاق الشاشة1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hnet.com-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hnet.com-image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hnet.com-image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thelogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_show_report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a_cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33281.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartmockups_kwmean21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Secure login-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QRImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+</Project>
